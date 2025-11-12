@@ -26,4 +26,5 @@ gcloud run deploy weather-agent \
     --update-env-vars SESSION_SERVICE_URI="postgresql+pg8000://postgres:ADK-deployment123@postgres/?unix_sock=/cloudsql/${DB_CONNECTION_NAME}/.s.PGSQL.5432",GOOGLE_CLOUD_PROJECT=${GOOGLE_CLOUD_PROJECT} \
     --region us-central1 \
     --min 1 \
-    --memory 1G
+    --memory 1G \
+    --concurrency 10
